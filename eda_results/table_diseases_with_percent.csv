@@ -1,0 +1,27 @@
+disease,Count,Percent (%)
+dementia || Alzheimer disease,175691,25.33
+normal,121078,17.45
+diabetes mellitus,75797,10.93
+dementia || Alzheimer disease || diabetes mellitus,50874,7.33
+tauopathy,47385,6.83
+dementia || vascular dementia || Alzheimer disease,31871,4.59
+dementia || Alzheimer disease || Parkinson disease,28175,4.06
+vascular dementia || diabetes mellitus,26600,3.83
+diabetes mellitus || head injury,17147,2.47
+dementia || vascular dementia,13304,1.92
+dementia || tauopathy,12193,1.76
+head injury,11441,1.65
+dementia || Alzheimer disease || Lewy body dementia,11308,1.63
+dementia,9681,1.4
+vascular dementia,7876,1.14
+dementia || Parkinson disease,7772,1.12
+dementia || Alzheimer disease || Parkinson disease || Lewy body dementia,7538,1.09
+amyotrophic lateral sclerosis,7103,1.02
+dementia || vascular dementia || Alzheimer disease || diabetes mellitus,6946,1.0
+dementia || vascular dementia || diabetes mellitus,4960,0.72
+dementia || vascular dementia || Alzheimer disease || Parkinson disease,4845,0.7
+dementia || diabetes mellitus || Parkinson disease,3990,0.58
+vascular dementia || diabetes mellitus || Parkinson disease,3906,0.56
+dementia || Parkinson disease || Lewy body dementia || head injury,2533,0.37
+dementia || frontotemporal dementia,2262,0.33
+dementia || Alzheimer disease || diabetes mellitus || Parkinson disease || head injury,1406,0.2

@@ -1,0 +1,97 @@
+sample_id,sample_name,donor_id,cell_type_annotation,cell_subtype,disease,sex,genetic_ancestry,n_cells
+Oligodendrocyte/OPC__Donor_333,Oligodendrocyte/OPC__Donor_333,Donor_333,Oligodendrocyte/OPC,NA,dementia || Alzheimer disease,male,East Asian,2313
+Excitatory neuron__Donor_865,Excitatory neuron__Donor_865,Donor_865,Excitatory neuron,NA,dementia || Alzheimer disease,male,East Asian,4201
+Excitatory neuron__Donor_614,Excitatory neuron__Donor_614,Donor_614,Excitatory neuron,NA,dementia || Alzheimer disease,female,European,1037
+Excitatory neuron__Donor_333,Excitatory neuron__Donor_333,Donor_333,Excitatory neuron,NA,dementia || Alzheimer disease,male,East Asian,1131
+Inhibitory neuron__Donor_31,Inhibitory neuron__Donor_31,Donor_31,Inhibitory neuron,NA,dementia || Alzheimer disease,female,East Asian,1540
+Excitatory neuron__Donor_1001,Excitatory neuron__Donor_1001,Donor_1001,Excitatory neuron,NA,dementia || Alzheimer disease,male,Asian,1949
+Excitatory neuron__Donor_638,Excitatory neuron__Donor_638,Donor_638,Excitatory neuron,NA,dementia || Alzheimer disease,female,East Asian,1569
+Excitatory neuron__Donor_228,Excitatory neuron__Donor_228,Donor_228,Excitatory neuron,NA,dementia || Alzheimer disease,male,European,990
+Inhibitory neuron__Donor_1001,Inhibitory neuron__Donor_1001,Donor_1001,Inhibitory neuron,NA,dementia || Alzheimer disease,male,Asian,807
+Excitatory neuron__Donor_31,Excitatory neuron__Donor_31,Donor_31,Excitatory neuron,NA,dementia || Alzheimer disease,female,East Asian,456
+Support/Vascular/Immune__Donor_1001,Support/Vascular/Immune__Donor_1001,Donor_1001,Support/Vascular/Immune,NA,dementia || Alzheimer disease,male,Asian,821
+Excitatory neuron__Donor_1007,Excitatory neuron__Donor_1007,Donor_1007,Excitatory neuron,NA,dementia || Alzheimer disease,female,European,394
+Astrocyte Homeostatic__Donor_614,Astrocyte Homeostatic__Donor_614,Donor_614,Astrocyte Homeostatic,NA,dementia || Alzheimer disease,female,European,460
+Inhibitory neuron__Donor_638,Inhibitory neuron__Donor_638,Donor_638,Inhibitory neuron,NA,dementia || Alzheimer disease,female,East Asian,383
+Inhibitory neuron__Donor_333,Inhibitory neuron__Donor_333,Donor_333,Inhibitory neuron,NA,dementia || Alzheimer disease,male,East Asian,375
+Astrocyte Reactive__Donor_1001,Astrocyte Reactive__Donor_1001,Donor_1001,Astrocyte Reactive,NA,dementia || Alzheimer disease,male,Asian,127
+Microglia__Donor_1001,Microglia__Donor_1001,Donor_1001,Microglia,NA,dementia || Alzheimer disease,male,Asian,879
+Oligodendrocyte/OPC__Donor_1001,Oligodendrocyte/OPC__Donor_1001,Donor_1001,Oligodendrocyte/OPC,NA,dementia || Alzheimer disease,male,Asian,1088
+Microglia__Donor_865,Microglia__Donor_865,Donor_865,Microglia,NA,dementia || Alzheimer disease,male,East Asian,579
+Support/Vascular/Immune__Donor_638,Support/Vascular/Immune__Donor_638,Donor_638,Support/Vascular/Immune,NA,dementia || Alzheimer disease,female,East Asian,233
+Support/Vascular/Immune__Donor_228,Support/Vascular/Immune__Donor_228,Donor_228,Support/Vascular/Immune,NA,dementia || Alzheimer disease,male,European,233
+Inhibitory neuron__Donor_865,Inhibitory neuron__Donor_865,Donor_865,Inhibitory neuron,NA,dementia || Alzheimer disease,male,East Asian,281
+Support/Vascular/Immune__Donor_614,Support/Vascular/Immune__Donor_614,Donor_614,Support/Vascular/Immune,NA,dementia || Alzheimer disease,female,European,411
+Inhibitory neuron__Donor_614,Inhibitory neuron__Donor_614,Donor_614,Inhibitory neuron,NA,dementia || Alzheimer disease,female,European,236
+Microglia__Donor_333,Microglia__Donor_333,Donor_333,Microglia,NA,dementia || Alzheimer disease,male,East Asian,59
+Microglia__Donor_614,Microglia__Donor_614,Donor_614,Microglia,NA,dementia || Alzheimer disease,female,European,392
+Oligodendrocyte/OPC__Donor_865,Oligodendrocyte/OPC__Donor_865,Donor_865,Oligodendrocyte/OPC,NA,dementia || Alzheimer disease,male,East Asian,102
+Support/Vascular/Immune__Donor_865,Support/Vascular/Immune__Donor_865,Donor_865,Support/Vascular/Immune,NA,dementia || Alzheimer disease,male,East Asian,467
+Support/Vascular/Immune__Donor_333,Support/Vascular/Immune__Donor_333,Donor_333,Support/Vascular/Immune,NA,dementia || Alzheimer disease,male,East Asian,345
+Microglia__Donor_228,Microglia__Donor_228,Donor_228,Microglia,NA,dementia || Alzheimer disease,male,European,25
+Astrocyte Reactive__Donor_614,Astrocyte Reactive__Donor_614,Donor_614,Astrocyte Reactive,NA,dementia || Alzheimer disease,female,European,40
+Support/Vascular/Immune__Donor_31,Support/Vascular/Immune__Donor_31,Donor_31,Support/Vascular/Immune,NA,dementia || Alzheimer disease,female,East Asian,176
+Microglia__Donor_1007,Microglia__Donor_1007,Donor_1007,Microglia,NA,dementia || Alzheimer disease,female,European,23
+Astrocyte Homeostatic__Donor_31,Astrocyte Homeostatic__Donor_31,Donor_31,Astrocyte Homeostatic,NA,dementia || Alzheimer disease,female,East Asian,247
+Inhibitory neuron__Donor_228,Inhibitory neuron__Donor_228,Donor_228,Inhibitory neuron,NA,dementia || Alzheimer disease,male,European,148
+Inhibitory neuron__Donor_1007,Inhibitory neuron__Donor_1007,Donor_1007,Inhibitory neuron,NA,dementia || Alzheimer disease,female,European,84
+Oligodendrocyte/OPC__Donor_638,Oligodendrocyte/OPC__Donor_638,Donor_638,Oligodendrocyte/OPC,NA,dementia || Alzheimer disease,female,East Asian,46
+Support/Vascular/Immune__Donor_1007,Support/Vascular/Immune__Donor_1007,Donor_1007,Support/Vascular/Immune,NA,dementia || Alzheimer disease,female,European,65
+Astrocyte Reactive__Donor_865,Astrocyte Reactive__Donor_865,Donor_865,Astrocyte Reactive,NA,dementia || Alzheimer disease,male,East Asian,89
+Oligodendrocyte/OPC__Donor_614,Oligodendrocyte/OPC__Donor_614,Donor_614,Oligodendrocyte/OPC,NA,dementia || Alzheimer disease,female,European,62
+Microglia__Donor_638,Microglia__Donor_638,Donor_638,Microglia,NA,dementia || Alzheimer disease,female,East Asian,117
+Microglia__Donor_31,Microglia__Donor_31,Donor_31,Microglia,NA,dementia || Alzheimer disease,female,East Asian,20
+Oligodendrocyte/OPC__Donor_228,Oligodendrocyte/OPC__Donor_228,Donor_228,Oligodendrocyte/OPC,NA,dementia || Alzheimer disease,male,European,25
+Excitatory neuron__Donor_545,Excitatory neuron__Donor_545,Donor_545,Excitatory neuron,NA,dementia || Parkinson disease,female,East Asian,1338
+Inhibitory neuron__Donor_941,Inhibitory neuron__Donor_941,Donor_941,Inhibitory neuron,NA,dementia || Parkinson disease,male,European,3450
+Excitatory neuron__Donor_941,Excitatory neuron__Donor_941,Donor_941,Excitatory neuron,NA,dementia || Parkinson disease,male,European,500
+Excitatory neuron__Donor_1467,Excitatory neuron__Donor_1467,Donor_1467,Excitatory neuron,NA,dementia || Parkinson disease,male,East Asian,312
+Oligodendrocyte/OPC__Donor_941,Oligodendrocyte/OPC__Donor_941,Donor_941,Oligodendrocyte/OPC,NA,dementia || Parkinson disease,male,European,279
+Support/Vascular/Immune__Donor_941,Support/Vascular/Immune__Donor_941,Donor_941,Support/Vascular/Immune,NA,dementia || Parkinson disease,male,European,208
+Inhibitory neuron__Donor_545,Inhibitory neuron__Donor_545,Donor_545,Inhibitory neuron,NA,dementia || Parkinson disease,female,East Asian,266
+Oligodendrocyte/OPC__Donor_545,Oligodendrocyte/OPC__Donor_545,Donor_545,Oligodendrocyte/OPC,NA,dementia || Parkinson disease,female,East Asian,24
+Microglia__Donor_545,Microglia__Donor_545,Donor_545,Microglia,NA,dementia || Parkinson disease,female,East Asian,51
+Support/Vascular/Immune__Donor_1467,Support/Vascular/Immune__Donor_1467,Donor_1467,Support/Vascular/Immune,NA,dementia || Parkinson disease,male,East Asian,112
+Inhibitory neuron__Donor_1467,Inhibitory neuron__Donor_1467,Donor_1467,Inhibitory neuron,NA,dementia || Parkinson disease,male,East Asian,135
+Support/Vascular/Immune__Donor_545,Support/Vascular/Immune__Donor_545,Donor_545,Support/Vascular/Immune,NA,dementia || Parkinson disease,female,East Asian,150
+Microglia__Donor_941,Microglia__Donor_941,Donor_941,Microglia,NA,dementia || Parkinson disease,male,European,57
+Astrocyte Homeostatic__Donor_941,Astrocyte Homeostatic__Donor_941,Donor_941,Astrocyte Homeostatic,NA,dementia || Parkinson disease,male,European,29
+Astrocyte Homeostatic__Donor_545,Astrocyte Homeostatic__Donor_545,Donor_545,Astrocyte Homeostatic,NA,dementia || Parkinson disease,female,East Asian,30
+Excitatory neuron__Donor_609,Excitatory neuron__Donor_609,Donor_609,Excitatory neuron,NA,normal,female,European,3246
+Excitatory neuron__Donor_735,Excitatory neuron__Donor_735,Donor_735,Excitatory neuron,NA,normal,female,European,902
+Excitatory neuron__Donor_634,Excitatory neuron__Donor_634,Donor_634,Excitatory neuron,NA,normal,male,European,1779
+Astrocyte Homeostatic__Donor_1146,Astrocyte Homeostatic__Donor_1146,Donor_1146,Astrocyte Homeostatic,NA,normal,female,European,1982
+Astrocyte Homeostatic__Donor_609,Astrocyte Homeostatic__Donor_609,Donor_609,Astrocyte Homeostatic,NA,normal,female,European,1389
+Support/Vascular/Immune__Donor_1146,Support/Vascular/Immune__Donor_1146,Donor_1146,Support/Vascular/Immune,NA,normal,female,European,1181
+Inhibitory neuron__Donor_1146,Inhibitory neuron__Donor_1146,Donor_1146,Inhibitory neuron,NA,normal,female,European,891
+Inhibitory neuron__Donor_1278,Inhibitory neuron__Donor_1278,Donor_1278,Inhibitory neuron,NA,normal,male,European,1971
+Oligodendrocyte/OPC__Donor_721,Oligodendrocyte/OPC__Donor_721,Donor_721,Oligodendrocyte/OPC,NA,normal,male,European,5107
+Microglia__Donor_634,Microglia__Donor_634,Donor_634,Microglia,NA,normal,male,European,687
+Excitatory neuron__Donor_1146,Excitatory neuron__Donor_1146,Donor_1146,Excitatory neuron,NA,normal,female,European,1632
+Excitatory neuron__Donor_721,Excitatory neuron__Donor_721,Donor_721,Excitatory neuron,NA,normal,male,European,638
+Microglia__Donor_1146,Microglia__Donor_1146,Donor_1146,Microglia,NA,normal,female,European,776
+Astrocyte Reactive__Donor_1146,Astrocyte Reactive__Donor_1146,Donor_1146,Astrocyte Reactive,NA,normal,female,European,61
+Microglia__Donor_609,Microglia__Donor_609,Donor_609,Microglia,NA,normal,female,European,739
+Inhibitory neuron__Donor_634,Inhibitory neuron__Donor_634,Donor_634,Inhibitory neuron,NA,normal,male,European,538
+Inhibitory neuron__Donor_721,Inhibitory neuron__Donor_721,Donor_721,Inhibitory neuron,NA,normal,male,European,1062
+Oligodendrocyte/OPC__Donor_1278,Oligodendrocyte/OPC__Donor_1278,Donor_1278,Oligodendrocyte/OPC,NA,normal,male,European,164
+Support/Vascular/Immune__Donor_735,Support/Vascular/Immune__Donor_735,Donor_735,Support/Vascular/Immune,NA,normal,female,European,417
+Inhibitory neuron__Donor_609,Inhibitory neuron__Donor_609,Donor_609,Inhibitory neuron,NA,normal,female,European,267
+Oligodendrocyte/OPC__Donor_735,Oligodendrocyte/OPC__Donor_735,Donor_735,Oligodendrocyte/OPC,NA,normal,female,European,75
+Excitatory neuron__Donor_1278,Excitatory neuron__Donor_1278,Donor_1278,Excitatory neuron,NA,normal,male,European,695
+Support/Vascular/Immune__Donor_609,Support/Vascular/Immune__Donor_609,Donor_609,Support/Vascular/Immune,NA,normal,female,European,620
+Support/Vascular/Immune__Donor_634,Support/Vascular/Immune__Donor_634,Donor_634,Support/Vascular/Immune,NA,normal,male,European,434
+Support/Vascular/Immune__Donor_1278,Support/Vascular/Immune__Donor_1278,Donor_1278,Support/Vascular/Immune,NA,normal,male,European,228
+Support/Vascular/Immune__Donor_721,Support/Vascular/Immune__Donor_721,Donor_721,Support/Vascular/Immune,NA,normal,male,European,510
+Astrocyte Homeostatic__Donor_735,Astrocyte Homeostatic__Donor_735,Donor_735,Astrocyte Homeostatic,NA,normal,female,European,414
+Inhibitory neuron__Donor_735,Inhibitory neuron__Donor_735,Donor_735,Inhibitory neuron,NA,normal,female,European,594
+Microglia__Donor_721,Microglia__Donor_721,Donor_721,Microglia,NA,normal,male,European,168
+Oligodendrocyte/OPC__Donor_634,Oligodendrocyte/OPC__Donor_634,Donor_634,Oligodendrocyte/OPC,NA,normal,male,European,232
+Astrocyte Homeostatic__Donor_721,Astrocyte Homeostatic__Donor_721,Donor_721,Astrocyte Homeostatic,NA,normal,male,European,107
+Astrocyte Reactive__Donor_735,Astrocyte Reactive__Donor_735,Donor_735,Astrocyte Reactive,NA,normal,female,European,21
+Astrocyte Reactive__Donor_634,Astrocyte Reactive__Donor_634,Donor_634,Astrocyte Reactive,NA,normal,male,European,245
+Microglia__Donor_735,Microglia__Donor_735,Donor_735,Microglia,NA,normal,female,European,270
+Oligodendrocyte/OPC__Donor_1146,Oligodendrocyte/OPC__Donor_1146,Donor_1146,Oligodendrocyte/OPC,NA,normal,female,European,80
+Astrocyte Reactive__Donor_609,Astrocyte Reactive__Donor_609,Donor_609,Astrocyte Reactive,NA,normal,female,European,35
+Oligodendrocyte/OPC__Donor_609,Oligodendrocyte/OPC__Donor_609,Donor_609,Oligodendrocyte/OPC,NA,normal,female,European,63
+Astrocyte Homeostatic__Donor_1278,Astrocyte Homeostatic__Donor_1278,Donor_1278,Astrocyte Homeostatic,NA,normal,male,European,33

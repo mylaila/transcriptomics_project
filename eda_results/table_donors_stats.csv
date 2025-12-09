@@ -1,0 +1,27 @@
+disease,Unique_Donors,Total_Cells,Cells_per_Donor
+dementia || Alzheimer disease,41,175691,4285
+normal,26,121078,4656
+diabetes mellitus,18,75797,4210
+dementia || Alzheimer disease || diabetes mellitus,12,50874,4239
+tauopathy,9,47385,5265
+dementia || vascular dementia || Alzheimer disease,7,31871,4553
+dementia || Alzheimer disease || Parkinson disease,5,28175,5635
+vascular dementia || diabetes mellitus,4,26600,6650
+dementia || tauopathy,3,12193,4064
+dementia || Parkinson disease,3,7772,2590
+vascular dementia,3,7876,2625
+head injury,2,11441,5720
+diabetes mellitus || head injury,2,17147,8573
+dementia || Alzheimer disease || Parkinson disease || Lewy body dementia,2,7538,3769
+dementia,2,9681,4840
+dementia || vascular dementia,2,13304,6652
+dementia || Alzheimer disease || Lewy body dementia,2,11308,5654
+dementia || vascular dementia || diabetes mellitus,1,4960,4960
+dementia || Alzheimer disease || diabetes mellitus || Parkinson disease || head injury,1,1406,1406
+dementia || vascular dementia || Alzheimer disease || diabetes mellitus,1,6946,6946
+dementia || vascular dementia || Alzheimer disease || Parkinson disease,1,4845,4845
+dementia || diabetes mellitus || Parkinson disease,1,3990,3990
+dementia || frontotemporal dementia,1,2262,2262
+dementia || Parkinson disease || Lewy body dementia || head injury,1,2533,2533
+amyotrophic lateral sclerosis,1,7103,7103
+vascular dementia || diabetes mellitus || Parkinson disease,1,3906,3906

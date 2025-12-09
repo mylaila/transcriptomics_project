@@ -1,0 +1,27 @@
+disease,female,male
+dementia,1,1
+dementia || vascular dementia,1,1
+dementia || vascular dementia || Alzheimer disease,6,1
+dementia || vascular dementia || Alzheimer disease || diabetes mellitus,1,0
+dementia || vascular dementia || Alzheimer disease || Parkinson disease,1,0
+dementia || vascular dementia || diabetes mellitus,1,0
+dementia || Alzheimer disease,21,20
+dementia || Alzheimer disease || diabetes mellitus,9,3
+dementia || Alzheimer disease || diabetes mellitus || Parkinson disease || head injury,0,1
+dementia || Alzheimer disease || Parkinson disease,4,1
+dementia || Alzheimer disease || Parkinson disease || Lewy body dementia,0,2
+dementia || Alzheimer disease || Lewy body dementia,1,1
+dementia || diabetes mellitus || Parkinson disease,0,1
+dementia || Parkinson disease,1,2
+dementia || Parkinson disease || Lewy body dementia || head injury,0,1
+dementia || tauopathy,3,0
+dementia || frontotemporal dementia,1,0
+vascular dementia,3,0
+vascular dementia || diabetes mellitus,4,0
+vascular dementia || diabetes mellitus || Parkinson disease,1,0
+amyotrophic lateral sclerosis,1,0
+diabetes mellitus,14,4
+diabetes mellitus || head injury,1,1
+tauopathy,7,2
+head injury,2,0
+normal,17,9

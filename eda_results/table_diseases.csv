@@ -1,0 +1,27 @@
+disease,count
+dementia || Alzheimer disease,175691
+normal,121078
+diabetes mellitus,75797
+dementia || Alzheimer disease || diabetes mellitus,50874
+tauopathy,47385
+dementia || vascular dementia || Alzheimer disease,31871
+dementia || Alzheimer disease || Parkinson disease,28175
+vascular dementia || diabetes mellitus,26600
+diabetes mellitus || head injury,17147
+dementia || vascular dementia,13304
+dementia || tauopathy,12193
+head injury,11441
+dementia || Alzheimer disease || Lewy body dementia,11308
+dementia,9681
+vascular dementia,7876
+dementia || Parkinson disease,7772
+dementia || Alzheimer disease || Parkinson disease || Lewy body dementia,7538
+amyotrophic lateral sclerosis,7103
+dementia || vascular dementia || Alzheimer disease || diabetes mellitus,6946
+dementia || vascular dementia || diabetes mellitus,4960
+dementia || vascular dementia || Alzheimer disease || Parkinson disease,4845
+dementia || diabetes mellitus || Parkinson disease,3990
+vascular dementia || diabetes mellitus || Parkinson disease,3906
+dementia || Parkinson disease || Lewy body dementia || head injury,2533
+dementia || frontotemporal dementia,2262
+dementia || Alzheimer disease || diabetes mellitus || Parkinson disease || head injury,1406
