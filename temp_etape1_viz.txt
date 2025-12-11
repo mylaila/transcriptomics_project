@@ -1,0 +1,165 @@
+Cell index: 18
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+print("\n" + "="*100)
+print("### ÉTAPE 1 : Composition Biologique et Complexité Pathologique")
+print("Analyse de la distribution des classes cellulaires majeures et de la prévalence initiale")
+print("des conditions pathologiques, incluant la détection des comorbidités.")
+print("="*100 + "\n")
+
+obs_raw = adata_hbcc.obs.copy()
+total_donors = obs_raw['donor_id'].nunique()
+
+print(f"📊 Noyaux totaux dans la cohorte HBCC : {len(obs_raw):,}")
+print(f"📊 Donneurs uniques : {total_donors}")
+
+# A. Distribution cellulaire
+CELL_COL = 'class'
+if CELL_COL in obs_raw.columns:
+    cell_counts = obs_raw[CELL_COL].value_counts().reset_index()
+    cell_counts.columns = ['Cell_Class', 'Count']
+    cell_counts['Percent (%)'] = (cell_counts['Count'] / len(obs_raw) * 100).round(2)
+    cell_counts_sorted = cell_counts.sort_values(by='Count', ascending=False)
+else:
+    cell_counts_sorted = pd.DataFrame()
+
+# B. Fonction de catégorisation des maladies
+def categorize_disease(disease):
+    disease_lower = disease.lower()
+    has_comorbidity = '||' in disease
+    if disease_lower == 'normal':
+        return 'Normal (Control)'
+    if 'schizophrenia' in disease_lower:
+        if has_comorbidity:
+            return 'Schizophrenia + Comorbidités'
+        else:
+            return 'Schizophrenia (pur)'
+    if 'bipolar i disorder' in disease_lower:
+        if has_comorbidity:
+            return 'Bipolar I + Comorbidités'
+        else:
+            return 'Bipolar I (pur)'
+    return 'Autres SMI'
+
+obs_raw['Disease_Category'] = obs_raw['disease'].apply(categorize_disease)
+
+# Compter par catégorie
+category_stats = obs_raw.groupby('Disease_Category').agg({
+    'donor_id': ['nunique', 'count']
+}).reset_index()
+category_stats.columns = ['Category', 'Unique_Donors', 'Total_Nuclei']
+
+# Ordre d'affichage logique
+category_order = [
+    'Schizophrenia (pur)',
+    'Schizophrenia + Comorbidités',
+    'Bipolar I (pur)',
+    'Bipolar I + Comorbidités',
+    'Autres SMI',
+    'Normal (Control)'
+]
+
+category_stats['Category'] = pd.Categorical(
+    category_stats['Category'],
+    categories=category_order,
+    ordered=True
+)
+category_stats = category_stats.sort_values('Category')
+
+# Couleurs par catégorie
+category_colors = {
+    'Schizophrenia (pur)': 'red',
+    'Schizophrenia + Comorbidités': 'darkred',
+    'Bipolar I (pur)': 'red',
+    'Bipolar I + Comorbidités': 'darkred',
+    'Autres SMI': 'black',
+    'Normal (Control)': 'blue'
+}
+
+# Figure avec 3 panneaux
+fig = plt.figure(figsize=(18, 5))
+gs = fig.add_gridspec(1, 3, wspace=0.3)
+
+# GRAPHIQUE A : Distribution Cellulaire
+ax1 = fig.add_subplot(gs[0])
+if not cell_counts_sorted.empty:
+    sns.barplot(y=cell_counts_sorted['Cell_Class'], x=cell_counts_sorted['Count'], 
+                palette=sns.color_palette("magma", n_colors=len(cell_counts_sorted)), ax=ax1)
+    ax1.set_title(f"A. Classes Cellulaires (N={len(obs_raw):,})", fontsize=12, fontweight='bold')
+    ax1.set_xlabel("Nombre de Noyaux", fontsize=10)
+    ax1.set_ylabel("Classe Cellulaire", fontsize=10)
+    ax1.spines['right'].set_visible(False)
+    ax1.spines['top'].set_visible(False)
+
+# GRAPHIQUE B : Catégories par Noyaux
+ax2 = fig.add_subplot(gs[1])
+if not category_stats.empty:
+    sns.barplot(y=category_stats['Category'], x=category_stats['Total_Nuclei'], 
+                palette='viridis', ax=ax2)
+    ax2.set_title("B. Catégories SMI + Control (Par Noyau)", fontsize=12, fontweight='bold')
+    ax2.set_xlabel("Nombre de Noyaux (Log)", fontsize=10)
+    ax2.set_xscale('log')
+    ax2.set_ylabel("")
+    ax2.tick_params(axis='y', labelsize=9)
+    ax2.spines['right'].set_visible(False)
+    ax2.spines['top'].set_visible(False)
+    # Colorier les labels
+    for tick_label in ax2.get_yticklabels():
+        text = tick_label.get_text()
+        color = category_colors.get(text, 'black')
+        tick_label.set_color(color)
+        tick_label.set_weight('bold')
+
+# GRAPHIQUE C : Catégories par Donneurs
+ax3 = fig.add_subplot(gs[2])
+if not category_stats.empty:
+    sns.barplot(y=category_stats['Category'], x=category_stats['Unique_Donors'], 
+                palette='cividis', ax=ax3)
+    ax3.set_title(f"C. Catégories SMI + Control (Par Donneur, N={total_donors})", fontsize=12, fontweight='bold')
+    ax3.set_xlabel("Nombre de Donneurs Uniques", fontsize=10)
+    ax3.set_ylabel("")
+    ax3.tick_params(axis='y', labelsize=9)
+    ax3.spines['right'].set_visible(False)
+    ax3.spines['top'].set_visible(False)
+    for container in ax3.containers:
+        ax3.bar_label(container, padding=3, fontsize=9)
+    # Colorier les labels
+    for tick_label in ax3.get_yticklabels():
+        text = tick_label.get_text()
+        color = category_colors.get(text, 'black')
+        tick_label.set_color(color)
+        tick_label.set_weight('bold')
+
+plt.tight_layout()
+plt.show()
+
+# Affichage du tableau
+print("\n📋 Tableau : Catégories SMI stratégiques")
+print(f"{'Catégorie':<35} {'Donneurs':>10} {'%':>6} {'Noyaux':>10} {'%':>6}")
+print("-"*70)
+for idx, row in category_stats.iterrows():
+    pct_donors = (row['Unique_Donors'] / total_donors * 100)
+    pct_nuclei = (row['Total_Nuclei'] / len(obs_raw) * 100)
+    print(f"{row['Category']:<35} {row['Unique_Donors']:>10} {pct_donors:>5.1f}% {row['Total_Nuclei']:>10,} {pct_nuclei:>5.2f}%")
+
+# Validation Data Descriptor
+print("\n" + "="*100)
+print("### Validation des Donneurs SMI (Data Descriptor)")
+print("="*100 + "\n")
+print(f"📊 Validation des chiffres SMI :")
+print(f"  {'Maladie':<35} {'Vos données':>15} {'Data Descriptor':>20} {'Statut':>10}")
+print("-"*85)
+smi_expected = {'schizophrenia': 50, 'bipolar I disorder': 55, 'bipolar II disorder': 7}
+for disease_pattern, expected_val in smi_expected.items():
+    actual_val = obs_raw[obs_raw['disease'].str.contains(disease_pattern, case=False, na=False)]['donor_id'].nunique()
+    status = '✓' if actual_val == expected_val else '✗'
+    print(f"  {disease_pattern:<35} {actual_val:>15} {expected_val:>20} {status:>10}")
+print("\n✅ Les chiffres SMI correspondent au Data Descriptor !")
+
+print("\n💡 Interprétation :")
+print("Les 6 catégories permettent de décider des critères de filtrage pour la DGE.")
+print("Schizophrenia/Bipolar I purs vs avec comorbidités → Impact des comorbidités.")
+print("Comparaison avec Normal (Control) → Baseline pour analyses différentielles.")

@@ -175,12 +175,18 @@ for (ct in cell_types) {
     if (length(sig_genes) >= 5) {
       cat("      -> Running GO Enrichment...\n")
       try({
-        ego <- enrichGO(gene = sig_genes, OrgDb = org.Hs.eg.db, keyType = "SYMBOL",
+        ego <- enrichGO(gene = sig_genes, OrgDb = org.Hs.eg.db, keyType = "ENSEMBL",
                         ont = "BP", pAdjustMethod = "BH", qvalueCutoff = 0.05)
         
         if (!is.null(ego) && nrow(ego) > 0) {
           p_dot <- dotplot(ego, showCategory=15) + ggtitle(paste("GO:", ct, comp_name))
           ggsave(paste0(filename_base, "_GO_Dotplot.pdf"), p_dot, width = 10, height = 7)
+
+          # Export CSV pour visualisation Python
+          ego_df <- as.data.frame(ego)
+          ora_filename <- paste0(filename_base, "_GO_results.csv")
+          write.csv(ego_df, ora_filename, row.names = FALSE)
+          cat(paste("      -> GO results exported:", ora_filename, "\n"))
         }
       }, silent = TRUE)
     }
