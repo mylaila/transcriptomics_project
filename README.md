@@ -2,6 +2,8 @@
 
 Projet M2 AIDA - Analyse différentielle de l'expression génique dans la maladie d'Alzheimer et la maladie de Parkinson
 
+**Repository** : [https://github.com/mylaila/transcriptomics_project](https://github.com/mylaila/transcriptomics_project)
+
 ## Vue d'ensemble
 
 Ce projet analyse les données single-nucleus RNA-seq du cortex préfrontal pour identifier les gènes différentiellement exprimés entre patients atteints d'Alzheimer (AD), Parkinson (PD) et contrôles sains.
@@ -14,7 +16,7 @@ Ce projet analyse les données single-nucleus RNA-seq du cortex préfrontal pour
 ## Structure du projet
 
 ```
-transcriptomics-code/
+transcriptomics_project/
 ├── data/                              # Données brutes et traitées
 │   ├── AD_PD_CTRL.h5ad               # Dataset initial
 │   ├── adata_filtered.h5ad            # Post-QC
@@ -44,6 +46,28 @@ transcriptomics-code/
     ├── translation_to_R.ipynb         # S4 : Agrégation pseudobulk
     ├── final_analysis_DGE.R           # S5 : Analyse différentielle (limma/voom)
     └── POST_R_FIGURES_4_ET_5.ipynb    # Visualisation finale
+```
+
+## Démarrage rapide
+
+### 1. Activer l'environnement
+
+**Windows (PowerShell/CMD)** :
+```cmd
+conda activate transcriptomics
+```
+
+Ou utilisez le script fourni :
+```cmd
+.\activate.bat
+```
+
+**VS Code** : L'environnement est configuré automatiquement. Vérifiez que le kernel "Python (transcriptomics)" est sélectionné dans vos notebooks.
+
+### 2. Vérifier l'installation
+
+```python
+python -c "import scanpy, anndata, pandas; print('✅ Environnement prêt!')"
 ```
 
 ## Pipeline d'analyse
@@ -139,6 +163,11 @@ Les 5 figures obligatoires sont générées automatiquement :
 Toutes les figures sont sauvegardées en PNG 300 dpi dans `figures/`.
 
 ## Environnement technique
+
+**Activation de l'environnement** :
+```bash
+conda activate transcriptomics
+```
 
 **Python** (3.8+) :
 - scanpy
