@@ -59,7 +59,7 @@ conda activate transcriptomics
 
 Ou utilisez le script fourni :
 ```cmd
-.\activate.bat
+.\.vscode\activate.bat
 ```
 
 **VS Code** : L'environnement est configuré automatiquement. Vérifiez que le kernel "Python (transcriptomics)" est sélectionné dans vos notebooks.
