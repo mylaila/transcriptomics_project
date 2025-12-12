@@ -1,0 +1,362 @@
+{
+
+  "meta_steps": [
+    {
+      "name": "ingest",
+      "label": "Chargement et inspection des données",
+      "description": "Étape d’ingestion des données brutes et des métadonnées telles que fournies par la source (CellxGene). Aucun filtrage ni transformation analytique n’est appliqué à ce stade."
+    },
+    {
+      "name": "comorbidity_check",
+      "label": "Vérification des comorbidités",
+      "description": "Étape dédiée à l’identification et à la gestion des comorbidités somatiques et psychiatriques associées aux donneurs, afin de définir des sous-cohortes cliniquement interprétables."
+    },
+    {
+      "name": "annotation",
+      "label": "Annotation biologique",
+      "description": "Étape d’annotation biologique, incluant l’assignation des classes, sous-classes et types cellulaires à partir des signatures transcriptomiques."
+    },
+    {
+      "name": "eda",
+      "label": "Exploratory Data Analysis (EDA)",
+      "description": "Exploration descriptive des métadonnées et des distributions afin de comprendre la structure du jeu de données avant toute modélisation."
+    },
+    {
+      "name": "QC,filtering",
+      "label": "Contrôle qualité (QC) et Sélection de cohortes",
+      "description": "Contrôle qualité et filtrage des cellules ou gènes selon des critères techniques (nombre d’UMI, nombre de gènes détectés, données primaires)."
+    },
+    {
+      "name": "modeling",
+      "label": "Modélisation / analyses statistiques",
+      "description": "Étape analytique incluant la modélisation statistique ou l’analyse différentielle de l’expression génique."
+    },
+    {
+      "name": "reporting",
+      "label": "Visualisation des données",
+      "description": "Étape de synthèse et de restitution des résultats sous forme de figures, tableaux et interprétations biologiques."
+    }
+  ],
+
+  "meta_levels": [
+    {
+      "name": "donor",
+      "description": "Niveau donneur : informations démographiques, génétiques ou cliniques décrivant l’individu humain dont provient l’échantillon."
+    },
+    {
+      "name": "clinical",
+      "description": "Niveau clinique : statuts pathologiques et diagnostics médicaux associés au donneur, incluant troubles psychiatriques et comorbidités somatiques."
+    },
+    {
+      "name": "sample",
+      "description": "Niveau échantillon : informations relatives au tissu biologique prélevé (localisation anatomique, type de suspension)."
+    },
+    {
+      "name": "cell",
+      "description": "Niveau cellulaire : annotations biologiques décrivant l’identité et le type des cellules ou noyaux analysés."
+    },
+    {
+      "name": "qc",
+      "description": "Niveau contrôle qualité : métriques techniques utilisées pour évaluer et filtrer les cellules ou gènes."
+    },
+    {
+      "name": "technical",
+      "description": "Niveau technique : paramètres expérimentaux et identifiants liés au protocole de séquençage et au traitement des données."
+    }
+  ],
+
+  "dataset": {
+    "name": "Population-scale cross-disorder atlas of the human prefrontal cortex",
+    "publication": "Lee, D. et al., medRxiv 2024",
+    "cohort": "HBCC",
+    "focus": "Troubles psychiatriques sévères (SMI) et contrôles",
+    "format": "AnnData (.h5ad)",
+    "source": "CZ CELLxGENE"
+  },
+
+  "adata.obs": {
+    "description": "Métadonnées au niveau des noyaux et des donneurs (cohorte HBCC).",
+    "columns": [
+      {
+        "column_name": "donor_id",
+        "type": "string",
+        "description": "Identifiant unique du donneur humain (HBCC IndividualID).",
+        "meta_level": "donor",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "Source",
+        "type": "category",
+        "description": "Banque de cerveaux d’origine du donneur.",
+        "meta_level": "donor",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "genetic_ancestry",
+        "type": "category",
+        "description": "Ascendance génétique inférée à partir des données génomiques.",
+        "meta_level": "donor",
+        "meta_step": "eda|modeling"
+      },
+      {
+        "column_name": "self_reported_ethnicity",
+        "type": "category",
+        "description": "Origine ethnique autodéclarée par le donneur.",
+        "meta_level": "donor",
+        "meta_step": "eda"
+      },
+      {
+        "column_name": "self_reported_ethnicity_ontology_term_id",
+        "type": "string",
+        "description": "Identifiant d’ontologie associé à l’ethnicité autodéclarée.",
+        "meta_level": "donor",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "sex",
+        "type": "category",
+        "description": "Sexe biologique du donneur.",
+        "meta_level": "donor",
+        "meta_step": "eda|modeling"
+      },
+      {
+        "column_name": "sex_ontology_term_id",
+        "type": "string",
+        "description": "Identifiant d’ontologie correspondant au sexe biologique.",
+        "meta_level": "donor",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "development_stage",
+        "type": "category",
+        "description": "Stade de développement de l’individu au moment du décès.",
+        "meta_level": "donor",
+        "meta_step": "eda"
+      },
+      {
+        "column_name": "development_stage_ontology_term_id",
+        "type": "string",
+        "description": "Identifiant d’ontologie du stade de développement.",
+        "meta_level": "donor",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "disease",
+        "type": "category",
+        "description": "Diagnostic principal ou état pathologique associé au donneur.",
+        "meta_level": "clinical",
+        "meta_step": "modeling|reporting"
+      },
+      {
+        "column_name": "disease_ontology_term_id",
+        "type": "string",
+        "description": "Identifiant d’ontologie correspondant à l’état pathologique.",
+        "meta_level": "clinical",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "tissue",
+        "type": "category",
+        "description": "Tissu cérébral d’origine du prélèvement.",
+        "meta_level": "sample",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "tissue_ontology_term_id",
+        "type": "string",
+        "description": "Identifiant UBERON correspondant au tissu.",
+        "meta_level": "sample",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "tissue_type",
+        "type": "category",
+        "description": "Catégorie anatomique générale du tissu.",
+        "meta_level": "sample",
+        "meta_step": "ingest"
+      },
+
+      {
+        "column_name": "Schizophrenia",
+        "type": "bool",
+        "description": "Indique si le donneur présente un diagnostic de schizophrénie.",
+        "meta_level": "clinical",
+        "meta_step": "experimental_design"
+      },
+      {
+        "column_name": "Bipolar_Disorder",
+        "type": "bool",
+        "description": "Indique si le donneur présente un trouble bipolaire.",
+        "meta_level": "clinical",
+        "meta_step": "experimental_design"
+      },
+      {
+        "column_name": "Tardive_dyskinesia",
+        "type": "bool",
+        "description": "Indique la présence d’une dyskinésie tardive associée à un trouble psychiatrique.",
+        "meta_level": "clinical",
+        "meta_step": "experimental_design"
+      },
+      {
+        "column_name": "ASCVD_status",
+        "type": "bool",
+        "description": "Indique la présence d’une maladie cardiovasculaire athéroscléreuse (comorbidité somatique).",
+        "meta_level": "clinical",
+        "meta_step": "comorbidity_check"
+      },
+      {
+        "column_name": "Vascular_status",
+        "type": "bool",
+        "description": "Indique la présence d’une pathologie vasculaire non neurodégénérative, considérée comme comorbidité somatique.",
+        "meta_level": "clinical",
+        "meta_step": "comorbidity_check"
+      },
+      {
+        "column_name": "class",
+        "type": "category",
+        "description": "Classification large du type cellulaire.",
+        "meta_level": "cell",
+        "meta_step": "annotation|eda"
+      },
+      {
+        "column_name": "subclass",
+        "type": "category",
+        "description": "Annotation intermédiaire du type cellulaire.",
+        "meta_level": "cell",
+        "meta_step": "annotation|eda"
+      },
+      {
+        "column_name": "subtype",
+        "type": "category",
+        "description": "Annotation fine du type cellulaire.",
+        "meta_level": "cell",
+        "meta_step": "annotation|eda"
+      },
+      {
+        "column_name": "cell_type",
+        "type": "category",
+        "description": "Type cellulaire annoté à la résolution la plus fine.",
+        "meta_level": "cell",
+        "meta_step": "annotation|eda|reporting"
+      },
+      {
+        "column_name": "cell_type_ontology_term_id",
+        "type": "string",
+        "description": "Identifiant d’ontologie correspondant au type cellulaire.",
+        "meta_level": "cell",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "assay",
+        "type": "category",
+        "description": "Technologie de séquençage utilisée.",
+        "meta_level": "technical",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "assay_ontology_term_id",
+        "type": "string",
+        "description": "Identifiant d’ontologie correspondant à la technologie.",
+        "meta_level": "technical",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "is_primary_data",
+        "type": "bool",
+        "description": "Indique si la cellule est conservée dans le jeu de données filtré.",
+        "meta_level": "qc",
+        "meta_step": "QC,filtering"
+      },
+      {
+        "column_name": "n_counts",
+        "type": "int",
+        "description": "Nombre total d’UMI détectés par cellule.",
+        "meta_level": "qc",
+        "meta_step": "QC,filtering"
+      },
+      {
+        "column_name": "n_genes",
+        "type": "int",
+        "description": "Nombre de gènes détectés par cellule.",
+        "meta_level": "qc",
+        "meta_step": "QC,filtering"
+      },
+      {
+        "column_name": "observation_joinid",
+        "type": "string",
+        "description": "Identifiant technique utilisé pour l’alignement des observations.",
+        "meta_level": "technical",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "suspension_type",
+        "type": "category",
+        "description": "Type de suspension biologique analysée (ex. noyau).",
+        "meta_level": "sample",
+        "meta_step": "ingest"
+      }
+    ]
+  },
+
+  "adata.var": {
+    "description": "Métadonnées associées aux gènes et caractéristiques moléculaires.",
+    "columns": [
+      {
+        "column_name": "feature_biotype",
+        "type": "category",
+        "description": "Biotype de l’entité génétique.",
+        "meta_level": "feature",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "feature_is_filtered",
+        "type": "bool",
+        "description": "Indique si le gène est conservé dans la matrice finale.",
+        "meta_level": "feature",
+        "meta_step": "filtering"
+      },
+      {
+        "column_name": "feature_length",
+        "type": "int",
+        "description": "Longueur de la séquence génétique.",
+        "meta_level": "feature",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "feature_name",
+        "type": "string",
+        "description": "Nom de l’entité génétique (souvent identifiant Ensembl).",
+        "meta_level": "feature",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "feature_reference",
+        "type": "string",
+        "description": "Référence du génome utilisée.",
+        "meta_level": "feature",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "feature_type",
+        "type": "category",
+        "description": "Type d’entité génétique (gène, exon, etc.).",
+        "meta_level": "feature",
+        "meta_step": "ingest"
+      },
+      {
+        "column_name": "gene_name",
+        "type": "string",
+        "description": "Symbole standard du gène.",
+        "meta_level": "feature",
+        "meta_step": "eda|reporting"
+      },
+      {
+        "column_name": "n_cells",
+        "type": "int",
+        "description": "Nombre de cellules exprimant ce gène.",
+        "meta_level": "feature",
+        "meta_step": "eda"
+      }
+    ]
+  }
+}
