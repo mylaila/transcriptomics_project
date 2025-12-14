@@ -1,0 +1,19 @@
+"cell_type","n_samples_ctrl","n_samples_scz","n_genes_tested","n_DEGs","n_up","n_down"
+"GABAergic neuron",89,29,18166,110,7,103
+"L2/3 intratelencephalic projecting glutamatergic neuron",114,48,24000,4,2,2
+"L2/3-6 intratelencephalic projecting glutamatergic neuron",114,50,21910,83,33,50
+"L5/6 near-projecting glutamatergic neuron",15,9,11707,1,1,0
+"L6 corticothalamic-projecting glutamatergic cortical neuron",35,13,13610,20,2,18
+"L6 intratelencephalic projecting glutamatergic neuron",56,21,16246,11,8,3
+"L6b glutamatergic neuron of the primary motor cortex",33,9,15240,94,0,94
+"VIP GABAergic cortical interneuron",128,47,20589,374,8,366
+"astrocyte",128,50,23913,13,2,11
+"endothelial cell",101,26,17909,7,5,2
+"lamp5 GABAergic cortical interneuron",107,38,17169,12,10,2
+"microglial cell",135,33,20460,18,8,10
+"oligodendrocyte precursor cell",141,51,22842,1,1,0
+"oligodendrocyte",128,52,26516,5,1,4
+"pericyte",42,17,14377,79,24,55
+"pvalb GABAergic cortical interneuron",128,45,20740,15,3,12
+"sst GABAergic cortical interneuron",129,42,20891,17,14,3
+"vascular leptomeningeal cell",23,8,13864,0,0,0
