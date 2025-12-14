@@ -3,6 +3,7 @@ combined_DE_results.csv
 combined_DESeq2_results.csv
 combined_edgeR_results.csv
 pseudobulk_matrix.csv
+data/exports/pseudobulk_counts.csv
 
 # Python
 __pycache__/
