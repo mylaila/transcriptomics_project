@@ -1,0 +1,70 @@
+> source("C:/Z/M2_AIDA/transcriptomics_project/05_R_GO_Enrichissement.R", echo = TRUE)
+
+> library(clusterProfiler)
+
+> library(org.Hs.eg.db)
+
+> # Charger les DEGs VIP (374 gènes)
+> vip_degs <- read.csv("C:/Z/M2_AIDA/transcriptomics_project/data/exports/DESeq2_Results/VIP_GABAergic_cortical_i ..." ... [TRUNCATED] 
+Erreur dans file(file, "rt") : impossible d'ouvrir la connexion
+De plus : Message d'avis :
+Dans file(file, "rt") :
+  impossible d'ouvrir le fichier 'C:/Z/M2_AIDA/transcriptomics_project/data/exports/DESeq2_Results/VIP_GABAergic_cortical_interneuron_DESeq2' : No such file or directory
+
+> source("C:/Z/M2_AIDA/transcriptomics_project/05_R_GO_Enrichissement.R", echo = TRUE)
+
+> library(clusterProfiler)
+
+> library(org.Hs.eg.db)
+
+> # Charger les DEGs VIP (374 gènes)
+> vip_degs <- read.csv("C:/Z/M2_AIDA/transcriptomics_project/data/exports/DESeq2_Results/VIP_GABAergic_cortical_i ..." ... [TRUNCATED] 
+
+> sig_genes <- vip_degs[vip_degs$padj < 0.05, ]
+
+> # Enrichissement GO
+> go_results <- enrichGO(
++     gene = rownames(sig_genes),
++     OrgDb = org.Hs.eg.db,
++     ont = "BP",  # Biological Process
+ .... [TRUNCATED] 
+
+> # Top 10 termes
+> barplot(go_results, showCategory=10)
+Message d'avis :
+Dans (function (model, data, ...)  :
+  Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?
+
+> source("C:/Z/M2_AIDA/transcriptomics_project/05_R_GO_Enrichissement.R", echo = TRUE)
+
+> library(clusterProfiler)
+
+> library(org.Hs.eg.db)
+
+> # Charger les DEGs VIP (374 gènes)
+> vip_degs <- read.csv("C:/Z/M2_AIDA/transcriptomics_project/data/exports/DESeq2_Results/VIP_GABAergic_cortical_i ..." ... [TRUNCATED] 
+
+> sig_genes <- vip_degs[vip_degs$padj < 0.05, ]
+
+> # Enrichissement GO
+> go_results <- enrichGO(
++     gene = rownames(sig_genes),
++     OrgDb = org.Hs.eg.db,
++     ont = "BP",  # Biological Process
+ .... [TRUNCATED] 
+
+> # Top 10 termes
+> # Visualisation GO – Top 10 processus biologiques
+> barplot(
++   go_results,
++   showCategory = 10,
++   title = "Enrichissement de ..." ... [TRUNCATED] 
+Message d'avis :
+Dans (function (model, data, ...)  :
+  Arguments in `...` must be used.
+✖ Problematic argument:
+• by = "Count"
+ℹ Did you misspell an argument name?

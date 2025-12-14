@@ -15,4 +15,9 @@ go_results <- enrichGO(
 )
 
 # Top 10 termes
-barplot(go_results, showCategory=10)
+dotplot(
+  go_results,
+  showCategory = 10,
+  orderBy = "x",
+  title = "Enrichissement des processus biologiques (GO) dans les interneurones GABAergiques VIP – SCH vs CTRL"
+)
