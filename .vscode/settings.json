@@ -1,0 +1,20 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": [],
+    
+    // Configuration de l'environnement Python par défaut
+    "python.defaultInterpreterPath": "C:\\Users\\BrahimElBouhali\\anaconda3\\envs\\transcriptomics\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    
+    // Conda
+    "python.condaPath": "C:\\Users\\BrahimElBouhali\\anaconda3\\Scripts\\conda.exe",
+    
+    // Configuration Jupyter - Kernel par défaut
+    "jupyter.kernels.preferredKernelId": "transcriptomics",
+    
+    // Terminal - Désactiver l'activation automatique pour éviter les erreurs
+    "python.terminal.activateEnvironment": false
+}

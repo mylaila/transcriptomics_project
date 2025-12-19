@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "Bash(jupyter nbconvert:*)",
+      "Bash(jq:*)",
+      "Bash(cat temp_etape1_viz.txt)"
+    ]
+  }
+}

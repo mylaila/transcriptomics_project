@@ -1,0 +1,29 @@
+# Large CSV files (results)
+combined_DE_results.csv
+combined_DESeq2_results.csv
+combined_edgeR_results.csv
+pseudobulk_matrix.csv
+data/exports/pseudobulk_counts.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data files
+*.h5ad
+*.h5
+*.rds
+
+# OS
+.DS_Store
+Thumbs.db
